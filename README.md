@@ -27,7 +27,7 @@ Simple script for Logitech K380 keyboard to swap upper fn keys
 
 Options:
 	-h		Print this text and exit
-	-r		Create rule to automatically swap key after reconnect device
+	-r		Create rule to automatically swap keys after reconnect device
 	-s 		Swap upper fn keys
 
 ```
