@@ -7,7 +7,7 @@
 
 ---
 
-Simple script for Logitech K380 keyboard to swap upper fn keys.
+Convenient way to swap upper fn keys on Logitech K380.
 
 ## Installation
 ```sh
@@ -23,7 +23,7 @@ sudo make install
 $ k380-swap-keys -h
 Usage: k380-swap-keys [OPTIONS...]
 
-Simple script for Logitech K380 keyboard to swap upper fn keys
+Convenient way to swap upper fn keys on Logitech K380
 
 Options:
 	-h		Print this text and exit

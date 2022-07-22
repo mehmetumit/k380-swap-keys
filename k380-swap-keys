@@ -2,7 +2,7 @@
 # Author:   Mehmet Ümit Özden
 # Website:  http://www.github.com/mehmetumit/k380-swap-keys
 # License:  GPLv3
-# Description: Simple script for Logitech K380 keyboard to swap upper fn keys
+# Description: Convenient way to swap upper fn keys on Logitech K380.
 
 # You can try for other devices too
 DEV='K380'
@@ -13,7 +13,7 @@ help() {
     cat <<EOF
 Usage: k380-swap-keys [OPTIONS...]
 
-Simple script for Logitech K380 keyboard to swap upper fn keys
+Convenient way to swap upper fn keys on Logitech K380.
 
 Options:
 	-h		Print this text and exit
