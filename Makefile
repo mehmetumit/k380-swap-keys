@@ -2,6 +2,7 @@ DEST_DIR ?= /usr/bin
 
 all:
 	@echo Run \'make install\' to install k380-swap-keys
+	@echo Run \'make uninstall\' to uninstall k380-swap-keys
 
 install:
 	@cp k380-swap-keys $(DEST_DIR)/k380-swap-keys
