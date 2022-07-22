@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Author:   Mehmet Ümit Özden
 # Website:  http://www.github.com/mehmetumit/k380-swap-keys
 # License:  GPLv3
@@ -7,7 +7,7 @@
 # You can try for other devices too
 DEV='K380'
 DEST="/etc/udev/rules.d/80-$DEV.rules"
-RULE='ACTION=="add", SUBSYSTEM=="hidraw", KERNEL=="hidraw*", SUBSYSTEMS=="hid", KERNELS=="*:046D:B342.*", RUN+="/bin/bash -c \"k380-swap-keys -s\""'
+RULE='ACTION=="add", SUBSYSTEM=="hidraw", KERNEL=="hidraw*", SUBSYSTEMS=="hid", KERNELS=="*:046D:B342.*", RUN+="/bin/sh -c \"k380-swap-keys -s\""'
 
 help() {
     cat <<EOF
@@ -25,8 +25,8 @@ EOF
 
 case "$1" in
 	-r) [ "$(id -u)" -eq 0 ] && echo "$RULE" > "$DEST"; printf "Rule created successfully...\nDon't forget to reconnect your device!\n" || echo "You need to run as root!";;
-	-s) hid=$(grep -FH "$DEV" /sys/class/hidraw/hidraw*/device/uevent | grep -o "hidraw[[:digit:]]") && [ ! -z "$hid" ] &&  echo -ne "\x10\xff\x0b\x1e\x00\x00\x00" > "/dev/$hid" || echo "Device $DEV not found!";;
-	-R) [ "$(id -u)" -eq 0 ] && ( rm "$DEST" &>/dev/null && printf "Rule removed!\nDon't forget to reconnect your device!\n" || printf "Rule not found!\n" ) || echo "You need to run as root!";;
+	-s) hid=$(grep -FH "$DEV" /sys/class/hidraw/hidraw*/device/uevent | grep -o "hidraw[[:digit:]]") && [ ! -z "$hid" ] &&  printf "\x10\xff\x0b\x1e\x00\x00\x00" > "/dev/$hid" || echo "Device $DEV not found!";;
+	-R) [ "$(id -u)" -eq 0 ] && ( [ -f "$DEST" ] && rm -f "$DEST" && printf "Rule removed!\nDon't forget to reconnect your device!\n" || echo "Rule not found!" ) || echo "You need to run as root!";;
 	-h|*) help && exit;;
 esac
 
