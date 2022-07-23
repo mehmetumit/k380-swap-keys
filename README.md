@@ -30,5 +30,5 @@ Options:
 	-r		Create rule to automatically swap keys after reconnect device
 	-R		Remove created rule to not automatically swap keys
 	-s 		Swap upper fn keys
-
+	-S 		Swap back to default upper fn keys
 ```
