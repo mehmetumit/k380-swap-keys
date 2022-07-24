@@ -4,7 +4,7 @@
 	<img src="https://img.shields.io/github/repo-size/MehmetUmit/k380-swap-keys" alt="Repo Size"/>
 	<img src="https://img.shields.io/github/stars/mehmetumit/k380-swap-keys?color=yellow" alt="Stars"/>
 	<img src="https://visitor-badge.glitch.me/badge?page_id=k380-swap-keys&right_color=green" alt="Visitors"/>
-	<img src="https://img.shields.io/aur/version/k380-swap-keys?color=%23123456" alt="AUR Version"/>
+	<a href="https://aur.archlinux.org/packages/k380-swap-keys"><img src="https://img.shields.io/aur/version/k380-swap-keys?color=%23123456" alt="AUR Version"/></a>
 	<img src="https://img.shields.io/github/license/MehmetUmit/k380-swap-keys" alt="License"/>
 </p>
 
