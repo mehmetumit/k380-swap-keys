@@ -1,15 +1,18 @@
-DEST_DIR ?= /usr/bin
+PREFIX ?= /usr/local/
+DEST_DIR ?= $(PREFIX)/bin
+TARGET_FILE ?= k380-swap-keys
+SRC_FILE ?= k380-swap-keys
 
 all:
-	@echo Run \'make install\' to install k380-swap-keys
-	@echo Run \'make uninstall\' to uninstall k380-swap-keys
+	@echo Run \'make install\' to install $(SRC_FILE)
+	@echo Run \'make uninstall\' to uninstall $(SRC_FILE)
 
 install:
-	@cp k380-swap-keys $(DEST_DIR)/k380-swap-keys
-	@chmod 755 $(DEST_DIR)/k380-swap-keys
-	@echo k380-swap-keys has been installed
+	@cp $(SRC_FILE) $(DEST_DIR)/$(TARGET_FILE)
+	@chmod 755 $(DEST_DIR)/$(TARGET_FILE)
+	@echo $(SRC_FILE) has been installed
 
 uninstall:
-	@rm -f $(DEST_DIR)/k380-swap-keys
-	@echo k380-swap-keys has been uninstalled
+	@rm -f $(DEST_DIR)/$(TARGET_FILE)
+	@echo $(SRC_FILE) has been uninstalled
 
