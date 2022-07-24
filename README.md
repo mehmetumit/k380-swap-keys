@@ -2,6 +2,8 @@
 <p align="center">
 	<img src="https://img.shields.io/github/languages/code-size/MehmetUmit/k380-swap-keys" alt="Code Size"/>
 	<img src="https://img.shields.io/github/repo-size/MehmetUmit/k380-swap-keys" alt="Repo Size"/>
+	<img src="https://img.shields.io/github/stars/mehmetumit/k380-swap-keys" alt="Repo Size"/>
+	<img src="https://visitor-badge.glitch.me/badge?page_id=k380-swap-keys" alt="Repo Size"/>
 	<img src="https://img.shields.io/github/license/MehmetUmit/k380-swap-keys" alt="License"/>
 </p>
 
