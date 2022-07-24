@@ -16,7 +16,7 @@ git clone https://github.com/mehmetumit/k380-swap-keys.git
 # Change directory
 cd k380-swap-keys
 # Install with make
-sudo make install
+make install
 ```
 ## Usage
 ```
