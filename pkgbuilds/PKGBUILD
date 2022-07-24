@@ -12,7 +12,7 @@ md5sums=('SKIP')
 
 pkgver() {
 	cd "${pkgname}"
-	printf "$(git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g')""
+	printf "$(git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g')"
 }
 
 package() {
