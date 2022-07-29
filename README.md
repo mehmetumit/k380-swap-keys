@@ -18,7 +18,7 @@ Convenient way to swap upper fn keys on Logitech K380.
 	```sh
 	yay -S k380-swap-keys
 	```
-  - Or by using the PKGBUILD [k380-swap-keys](pkgbuilds/PKGBUILD)
+  - Or by using the [PKGBUILD](pkgbuilds/PKGBUILD)
 	```sh
 	cd pkgbuilds/
 	makepkg -si
