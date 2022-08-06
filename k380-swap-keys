@@ -5,7 +5,7 @@
 # Description: Convenient way to swap upper fn keys on Logitech K380.
 
 # You can try for other devices too
-DEV='K380'
+DEV='K380' # You need to change KERNELS in RULE to KERNELS=="*:046D:*" for other logitech devices
 DEST="/etc/udev/rules.d/80-$DEV.rules"
 RULE='ACTION=="add", SUBSYSTEM=="hidraw", KERNEL=="hidraw*", SUBSYSTEMS=="hid", KERNELS=="*:046D:B342.*", RUN+="/bin/sh -c \"k380-swap-keys -s\""'
 

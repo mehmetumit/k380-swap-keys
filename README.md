@@ -12,6 +12,9 @@
 
 Convenient way to swap upper fn keys on Logitech K380.
 
+> If you want to try for other devices you need to change `DEV` with your device name and *KERNELS* in *RULE* to `KERNELS=="*:046D:*"` in script. (*:046D:* is vendor id of Logitech devices. Rest of it product id of device. You can add it too but it should work without it.)
+
+
 ## Installation
 - Arch Linux:
   - Install via AUR
