@@ -26,9 +26,9 @@ EOF
 
 case "$1" in
 	-r) [ "$(id -u)" -eq 0 ] && ( echo "$RULE" > "$DEST"; printf "Rule created successfully...\n"; sh -c 'k380-swap-keys -s' ) || echo "You need to run as root!";;
-	-s) hid=$(grep -FH "$DEV" /sys/class/hidraw/hidraw*/device/uevent | grep -o "hidraw[[:digit:]]") && [ ! -z "$hid" ] &&  printf "\x10\xff\x0b\x1e\x00\x00\x00" > "/dev/$hid" || echo "Device $DEV not found!";;
+	-s) hid=$(grep -FH "$DEV" /sys/class/hidraw/hidraw*/device/uevent | grep -o "hidraw[0-9][0-9]*") && [ ! -z "$hid" ] &&  printf "\x10\xff\x0b\x1e\x00\x00\x00" > "/dev/$hid" || echo "Device $DEV not found!";;
 	-R) [ "$(id -u)" -eq 0 ] && ( [ -f "$DEST" ] && ( rm -f "$DEST" && printf "Rule removed!\n"; sh -c 'k380-swap-keys -S' ) || echo "Rule not found!" ) || echo "You need to run as root!";;
-	-S) hid=$(grep -FH "$DEV" /sys/class/hidraw/hidraw*/device/uevent | grep -o "hidraw[[:digit:]]") && [ ! -z "$hid" ] &&  printf "\x10\xff\x0b\x1e\x01\x00\x00" > "/dev/$hid" || echo "Device $DEV not found!";;
+	-S) hid=$(grep -FH "$DEV" /sys/class/hidraw/hidraw*/device/uevent | grep -o "hidraw[0-9][0-9]*") && [ ! -z "$hid" ] &&  printf "\x10\xff\x0b\x1e\x01\x00\x00" > "/dev/$hid" || echo "Device $DEV not found!";;
 	-h|*) help && exit;;
 esac
 
