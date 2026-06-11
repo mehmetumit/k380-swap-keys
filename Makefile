@@ -1,4 +1,4 @@
-PREFIX ?= /usr/local/
+PREFIX ?= /usr/local
 DEST_DIR ?= $(PREFIX)/bin
 TARGET_FILE ?= k380-swap-keys
 SRC_FILE ?= k380-swap-keys
